@@ -4,7 +4,7 @@ A **fully responsive** and animated **Login + Signup UI** designed and developed
 This project features a cute panda theme with smooth animations, focus interactions, and clean form transitions. Both **login** and **signup** forms are included.
 
 👉 **Live Demo:**  
-🔗 [Click here to view it live](https://avdeshjadon-dev.github.io/PandaLogin-SignUpPage/)
+🔗 [Click here to view it live](https://avdeshjadon-dev.github.io/PandaLogin-SignUpPage)
 
 ---
 
