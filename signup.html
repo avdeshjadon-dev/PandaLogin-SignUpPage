@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - ComixAll</title>
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="signup-page">
+
+    <div class="login-wrapper">
+        <div id="alert-box" class="alert"></div>
+        <div class="panda">
+            <div class="ear"></div>
+            <div class="face">
+                <div class="eye-shade"></div>
+                <div class="eye-white">
+                    <div class="eye-ball"></div>
+                </div>
+                <div class="eye-shade rgt"></div>
+                <div class="eye-white rgt">
+                    <div class="eye-ball"></div>
+                </div>
+                <div class="nose"></div>
+                <div class="mouth"></div>
+            </div>
+            <div class="foot">
+                <div class="finger"></div>
+            </div>
+            <div class="foot rgt">
+                <div class="finger"></div>
+            </div>
+        </div>
+
+        <form id="signup-form">
+            <div class="hand"></div>
+            <div class="hand rgt"></div>
+            <h1>Comixall Signup</h1>
+            <div class="form-group">
+                <input id="name" type="text" required="required" class="form-control" placeholder=" " />
+                <label class="form-label">Name</label>
+            </div>
+            <div class="form-group">
+                <input id="email" type="email" required="required" class="form-control" autocomplete="email"
+                    placeholder=" " />
+                <label class="form-label">Email</label>
+            </div>
+            <div class="form-group">
+                <input id="password" type="password" required="required" class="form-control"
+                    autocomplete="new-password" placeholder=" " />
+                <label class="form-label">Password</label>
+                <i class="view-password fas fa-eye"></i>
+            </div>
+            <div class="form-group">
+                <input id="confirm-password" type="password" required="required" class="form-control"
+                    autocomplete="new-password" placeholder=" " />
+                <label class="form-label">Confirm Password</label>
+                <i class="view-password fas fa-eye"></i>
+            </div>
+            <button class="btn" type="submit">Sign Up</button>
+            <p class="bottom-text">Already have an account? <a href="login.html">Login</a></p>
+        </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+
+</html>

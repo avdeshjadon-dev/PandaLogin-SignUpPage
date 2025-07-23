@@ -1,0 +1,380 @@
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script|Roboto);
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #ff4081;
+}
+
+body {
+  background: #c23262;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.login-wrapper {
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+}
+
+.panda {
+  position: relative;
+  width: 200px;
+  margin: 0 auto;
+  margin-bottom: -100px;
+}
+
+.face {
+  width: 200px;
+  height: 200px;
+  background: #fff;
+  border-radius: 100%;
+  margin: -15px auto 0;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+.ear,
+.ear:after {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: #000;
+  z-index: 5;
+  border: 10px solid #fff;
+  left: -15px;
+  top: -15px;
+  border-radius: 100%;
+}
+.ear:after {
+  content: "";
+  left: 125px;
+}
+
+.eye-shade {
+  background: #000;
+  width: 50px;
+  height: 80px;
+  margin: 10px;
+  position: absolute;
+  top: 35px;
+  left: 25px;
+  transform: rotate(220deg);
+  border-radius: 25px / 20px 30px 35px 40px;
+}
+.eye-shade.rgt {
+  transform: rotate(140deg);
+  left: 105px;
+}
+
+.eye-white {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background: #fff;
+  z-index: 500;
+  left: 40px;
+  top: 80px;
+  overflow: hidden;
+}
+.eye-white.rgt {
+  right: 40px;
+  left: auto;
+}
+
+.eye-ball {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  left: 20px;
+  top: 20px;
+  max-width: 10px;
+  max-height: 10px;
+  transition: 0.1s;
+}
+.eye-ball:after {
+  content: "";
+  background: #000;
+  position: absolute;
+  border-radius: 100%;
+  right: 0;
+  bottom: 0px;
+  width: 20px;
+  height: 20px;
+}
+
+.nose {
+  position: absolute;
+  height: 20px;
+  width: 35px;
+  bottom: 40px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 50px 20px / 30px 15px;
+  transform: rotate(15deg);
+  background: #000;
+}
+.body {
+  display: none;
+}
+
+.hand {
+  width: 40px;
+  height: 30px;
+  border-radius: 50px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
+  background: #000;
+  position: absolute;
+  top: 70px;
+  left: -25px;
+  z-index: 10;
+}
+.hand.rgt {
+  left: auto;
+  right: -25px;
+}
+
+.foot {
+  top: 370px;
+  left: -95px;
+  position: absolute;
+  background: #000;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 40px 40px 39px 40px / 26px 26px 63px 63px;
+  width: 82px;
+  height: 120px;
+  z-index: 10;
+}
+.foot:after {
+  content: "";
+  width: 55px;
+  height: 65px;
+  background: #222;
+  border-radius: 100%;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.foot .finger,
+.foot .finger:after,
+.foot .finger:before {
+  position: absolute;
+  width: 25px;
+  height: 35px;
+  background: #222;
+  border-radius: 100%;
+  top: 10px;
+  right: 5px;
+}
+.foot .finger:after,
+.foot .finger:before {
+  content: "";
+  right: 30px;
+  width: 20px;
+  top: 0;
+}
+.foot .finger:before {
+  right: 55px;
+  top: 5px;
+}
+.foot.rgt {
+  left: auto;
+  right: -95px;
+}
+.foot.rgt .finger,
+.foot.rgt .finger:after,
+.foot.rgt .finger:before {
+  left: 5px;
+  right: auto;
+}
+.foot.rgt .finger:after {
+  left: 30px;
+  right: auto;
+}
+.foot.rgt .finger:before {
+  left: 55px;
+  right: auto;
+}
+
+.signup-page .foot {
+  top: 520px;
+}
+
+form {
+  background: #fff;
+  padding: 100px 40px 30px 40px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  position: relative;
+  z-index: 5;
+  border: 1px solid #eee;
+  transition: transform 0.3s ease-in-out;
+}
+
+form.up {
+  transform: translateY(-40px);
+}
+
+h1 {
+  color: var(--primary);
+  font-family: "Pacifico", cursive;
+  margin: 0 0 20px 0;
+}
+.btn {
+  background: #fff;
+  padding: 5px;
+  width: 150px;
+  height: 35px;
+  border: 1px solid var(--primary);
+  margin-top: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 50px var(--primary) inset;
+  color: #fff;
+  border-radius: 5px;
+}
+.btn:hover {
+  box-shadow: 0 0 var(--primary) inset;
+  color: var(--primary);
+}
+.btn:focus {
+  outline: none;
+}
+
+.form-group {
+  position: relative;
+  font-size: 15px;
+  color: #666;
+}
+.form-group + .form-group {
+  margin-top: 20px;
+}
+.form-label {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 5px;
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+.form-control {
+  width: 100%;
+  position: relative;
+  z-index: 3;
+  height: 35px;
+  background: none;
+  border: none;
+  padding: 5px 0;
+  transition: 0.3s;
+  border-bottom: 1px solid #777;
+  color: #555;
+  outline: none;
+}
+
+.form-control:focus {
+  outline: none;
+  box-shadow: 0 1px var(--primary);
+  border-color: var(--primary);
+}
+
+.form-control:focus + .form-label,
+.form-control:not(:placeholder-shown) + .form-label {
+  font-size: 12px;
+  color: var(--primary);
+  transform: translateY(-15px);
+}
+
+.view-password {
+  position: absolute;
+  right: 5px;
+  top: 8px;
+  color: #999;
+  cursor: pointer;
+  z-index: 4;
+}
+.view-password:hover {
+  color: var(--primary);
+}
+
+.alert {
+  display: none;
+  position: absolute;
+  top: -90px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background-color: #fff;
+  border-radius: 20px;
+  font-size: 0.9em;
+  text-align: center;
+  z-index: 200;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  white-space: nowrap;
+  border: 1px solid #eee;
+}
+
+.alert.error {
+  color: #d8000c;
+  background-color: #ffd2d2;
+}
+
+.alert.success {
+  color: #270;
+  background-color: #dff2bf;
+}
+
+form.wrong-entry {
+  animation: wrong-log 0.4s;
+}
+
+.bottom-text {
+  margin-top: 30px;
+  font-size: 0.9rem;
+}
+.bottom-text a {
+  color: var(--primary);
+  text-decoration: none;
+}
+.bottom-text a:hover {
+  text-decoration: underline;
+}
+
+@keyframes wrong-log {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20%,
+  60% {
+    transform: translateX(15px);
+  }
+  40%,
+  80% {
+    transform: translateX(-15px);
+  }
+}
+
+@media (max-width: 480px) {
+  .login-wrapper {
+    transform: scale(0.9);
+  }
+  form {
+    padding: 100px 20px 20px 20px;
+  }
+}
